@@ -1,5 +1,5 @@
 ### Hi there 👋
-![看！冰山里有一窝小北极熊](https://bing.ioliu.cn/photo/CubsEmerge_ZH-CN1697031244)
+![看！冰山里有一窝小北极熊](https://bing.ioliu.cn/photo/CubsEmerge_ZH-CN1697031244?force=ranking_3)
 
 #### I am walt1012, welcome to my blog!
 
