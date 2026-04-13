@@ -9,4 +9,4 @@
 - 👯 I want to be friends with many people.
 - 🤔 I like to play computer games sometimes.
 - 💬 Lying makes me very nervous, so I rarely lie.
-- 😄 I love my parents and my wife forever.
+- 😄 I love my family forever.
