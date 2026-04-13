@@ -1,0 +1,118 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <!-- 渐变定义 -->
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="text-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#38bdf8;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#818cf8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c084fc;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="card-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.05" />
+    </linearGradient>
+    
+    <!-- 阴影滤镜 -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="800" height="600" fill="url(#bg-gradient)" rx="15" />
+  
+  <!-- 装饰性网格背景 -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+  </pattern>
+  <rect width="800" height="600" fill="url(#grid)" rx="15" />
+
+  <!-- 顶部标题区域 -->
+  <g transform="translate(40, 60)">
+    <text x="0" y="0" font-family="'Fira Code', monospace" font-size="28" fill="url(#text-gradient)" font-weight="bold">
+      &lt;Developer /&gt;
+    </text>
+    <text x="0" y="40" font-family="'Fira Code', monospace" font-size="16" fill="#94a3b8">
+      System.out.println("Hello, World!");
+    </text>
+    
+    <!-- 打字机动画光标 -->
+    <rect x="260" y="25" width="10" height="20" fill="#38bdf8">
+      <animate attributeName="opacity" values="0;1;0" dur="1s" repeatCount="indefinite" />
+    </rect>
+  </g>
+
+  <!-- 左侧：个人卡片 (玻璃拟态) -->
+  <g transform="translate(40, 120)">
+    <rect width="340" height="220" fill="url(#card-gradient)" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1" rx="10" />
+    <text x="20" y="40" font-family="sans-serif" font-size="18" fill="#e2e8f0" font-weight="bold">👤 Profile</text>
+    
+    <g transform="translate(20, 70)" font-family="sans-serif" font-size="14" fill="#cbd5e1">
+      <text x="0" y="0">📍 Shanghai, China</text>
+      <text x="0" y="30">💼 Java Architect &amp; Data Scientist</text>
+      <text x="0" y="60">🎮 Gamer | 🎬 Movie Buff</text>
+      <text x="0" y="90">⚡ Energy Conservation Artist</text>
+    </g>
+  </g>
+
+  <!-- 右侧：技术栈雷达/列表 -->
+  <g transform="translate(420, 120)">
+    <rect width="340" height="220" fill="url(#card-gradient)" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1" rx="10" />
+    <text x="20" y="40" font-family="sans-serif" font-size="18" fill="#e2e8f0" font-weight="bold">🛠 Tech Stack</text>
+    
+    <!-- 技能条动画 -->
+    <g transform="translate(20, 70)">
+      <!-- Java -->
+      <text x="0" y="0" font-family="monospace" font-size="12" fill="#fbbf24">Java</text>
+      <rect x="60" y="-10" width="200" height="6" fill="#334155" rx="3" />
+      <rect x="60" y="-10" width="180" height="6" fill="#fbbf24" rx="3">
+        <animate attributeName="width" from="0" to="180" dur="1.5s" fill="freeze" />
+      </rect>
+      
+      <!-- Spring -->
+      <text x="0" y="40" font-family="monospace" font-size="12" fill="#6ee7b7">Spring Boot</text>
+      <rect x="60" y="30" width="200" height="6" fill="#334155" rx="3" />
+      <rect x="60" y="30" width="160" height="6" fill="#6ee7b7" rx="3">
+        <animate attributeName="width" from="0" to="160" dur="1.5s" fill="freeze" />
+      </rect>
+
+      <!-- Python/Data -->
+      <text x="0" y="80" font-family="monospace" font-size="12" fill="#93c5fd">Python / AI</text>
+      <rect x="60" y="70" width="200" height="6" fill="#334155" rx="3" />
+      <rect x="60" y="70" width="140" height="6" fill="#93c5fd" rx="3">
+        <animate attributeName="width" from="0" to="140" dur="1.5s" fill="freeze" />
+      </rect>
+    </g>
+  </g>
+
+  <!-- 底部：终端风格足迹 -->
+  <g transform="translate(40, 380)">
+    <rect width="720" height="160" fill="#000000" fill-opacity="0.3" stroke="#334155" stroke-width="1" rx="8" />
+    <!-- 终端头部 -->
+    <circle cx="60" cy="30" r="6" fill="#ef4444" />
+    <circle cx="80" cy="30" r="6" fill="#eab308" />
+    <circle cx="100" cy="30" r="6" fill="#22c55e" />
+    <text x="130" y="34" font-family="monospace" font-size="12" fill="#64748b">bash — 80x24</text>
+    
+    <!-- 终端内容 -->
+    <g transform="translate(20, 60)" font-family="'Fira Code', monospace" font-size="13">
+      <text x="0" y="0" fill="#94a3b8">$ cat interests.txt</text>
+      <text x="0" y="25" fill="#e2e8f0">> Exploring Microservices Architecture</text>
+      <text x="0" y="50" fill="#e2e8f0">> Analyzing Big Data with Spark</text>
+      <text x="0" y="75" fill="#e2e8f0">> Watching Sci-Fi Movies (Interstellar)</text>
+      <text x="0" y="100" fill="#38bdf8">> _cursor_blinking...</text>
+    </g>
+  </g>
+  
+  <!-- 底部社交链接提示 -->
+  <text x="400" y="570" font-family="sans-serif" font-size="12" fill="#64748b" text-anchor="middle">
+    Scroll down for repositories &amp; contact info ↓
+  </text>
+</svg>
